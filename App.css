@@ -1,0 +1,101 @@
+/* ===== Global ===== */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #0f172a; /* 🔥 Better dark blue background */
+  color: #f1f5f9; /* Clear white text */
+}
+
+/* ===== Page Container ===== */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* ===== Title ===== */
+h1 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* ===== Buttons ===== */
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #1e293b; /* Strong button contrast */
+  border: 1px solid #334155;
+  color: #f1f5f9;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background-color: #334155;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ===== Table ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Sticky Header */
+thead {
+  position: sticky;
+  top: 0;
+  background-color: #334155;
+  z-index: 10;
+}
+
+th {
+  padding: 16px;
+  text-align: left;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+/* Table Rows */
+td {
+  padding: 16px;
+  border-bottom: 1px solid #334155;
+}
+
+/* Row Hover */
+tbody tr:hover {
+  background-color: #2d3a4f;
+  cursor: pointer;
+}
+
+/* Selected Row */
+.selected {
+  background-color: #3b4c66 !important;
+}
+
+/* ===== Attendance Colors ===== */
+.green {
+  color: #22c55e; /* Brighter green */
+  font-weight: bold;
+}
+
+.red {
+  color: #ef4444; /* Better red */
+  font-weight: bold;
+}
