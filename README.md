@@ -1,16 +1,50 @@
-# React + Vite
+🎓 Student Attendance Tracker
+A clean, responsive React application designed to manage and visualize student attendance data. This project fetches real-world user data and simulates attendance metrics to demonstrate state management, conditional rendering, and component modularity in React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Features
+Dynamic Data Fetching: Retrieves student names and locations from the JSONPlaceholder API.
 
-Currently, two official plugins are available:
+Attendance Simulation: Automatically generates random attendance percentages for each student upon initialization.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Smart Filtering:
 
-## React Compiler
+Filter by status: All, Present (≥ 75%), or Absent (< 75%).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Toggle view for Low Attendance students specifically.
 
-## Expanding the ESLint configuration
+Interactive UI:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clickable rows to highlight selected students.
+
+Visual cues: Green text for passing attendance, red text for low attendance.
+
+Responsive table layout.
+
+🛠️ Technical Stack
+Frontend: React (Hooks: useState, useEffect)
+
+Styling: CSS3 (Standard CSS with conditional class mapping)
+
+API: JSONPlaceholder (Users endpoint)
+
+📂 Project Structure
+Plaintext
+src/
+├── components/
+│   ├── Controls.js       # Action buttons for filtering and toggles
+│   ├── StudentTable.js   # Logic for filtering and mapping student data
+│   └── StudentRow.js     # Individual row component with selection logic
+├── App.js                # Root component; manages global state and API calls
+└── App.css               # Styling for layout and conditional formatting
+⚙️ Component Overview
+App.js
+The "Brain" of the application. It handles the initial fetch request, manages the students array, and keeps track of the current filter and selectedStudent states.
+
+Controls.js
+A presentation component that provides the user interface for modifying filters. It triggers state updates in the parent App component.
+
+StudentTable.js
+Handles the core business logic for data display. It filters the student list based on the user's current selection before mapping the data to the UI.
+
+StudentRow.js
+A granular component that renders a single student's data. It uses conditional logic to apply styles (e.g., highlighting a selected row or coloring attendance percentages).
